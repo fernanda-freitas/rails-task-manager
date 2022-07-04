@@ -1,5 +1,11 @@
 <%= simple_form_for(@task) do |f| %>
   <%= f.input :title %>
   <%= f.input :details %>
-  <%= f.submit %>
+  <div class="d-flex align-center">
+    <%= f.check_box :completed, class:'form-check-input'%>
+    <span class="ms-2">Mark as completed</span>
+  </div>
+  <div class="mt-4">
+    <%= f.submit %>
+  </div>
 <% end %>

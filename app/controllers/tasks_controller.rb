@@ -28,6 +28,10 @@ class TasksController < ApplicationController
     find_task
   end
 
+  def new_record?
+    @new_record
+  end
+
   def update
     find_task
     @task.update(task_params)
