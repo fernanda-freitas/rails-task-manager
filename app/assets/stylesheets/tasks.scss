@@ -1,3 +1,49 @@
+.hover:hover {
+  cursor: pointer;
+}
+
+.title-section {
+  display: inline-flex;
+
+  span {
+    font-size: 1.5rem;
+    margin: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.index-list {
+  padding-left: 0rem;
+  max-width: 400px;
+  margin-top: 1.5rem;
+}
+
 ol,ul {
   list-style-type: none;
+}
+
+.icon-xs {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-sm {
+  width: 24px;
+  height: 24px;
+}
+
+.color-blue{
+  color: #0d6efd
+}
+
+.color-red {
+  color: #dc3545;
+}
+
+.color-gray {
+  color: #6c757d;
+}
+
+.color-gray-light {
+  color: #a2a9af;
 }
