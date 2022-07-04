@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A CRUD app to contemplate the following user stories:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. As a user, I can list tasks
+2. As a user, I can view the details of a task
+3. As a user, I can add a new task
+4. As a user, I can edit a task (mark as completed / update title & details)
+5. As a user, I can remove a task
