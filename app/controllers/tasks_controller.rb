@@ -1,40 +1,42 @@
 class TasksController < ApplicationController
 
-  # Create (form)
+  before_action :find_task, only: [:show, :edit, :update, :destroy]
+
+  # Create Form
   def new
     @task = Task.new
   end
 
-  # Create (instance)
+  # Create Instance
   def create
     @task = Task.create(task_params)
     redirect_to tasks_path(@task)
   end
 
-  # Read (all)
+  # Read All
   def index
     @tasks = Task.all
   end
 
-  # Read (one)
+  # Read One
   def show
-    @task = Task.find(params[:id])
+    find_task
   end
 
   # Update
   def edit
-    @task = Task.find(params[:id])
+    find_task
   end
 
   def update
-    @task = Task.find(params[:id])
+    find_task
     @task.update(task_params)
     redirect_to tasks_path
   end
 
   # Delete
   def destroy
-    @task = Task.find(params[:id])
+    find_task
     @task.destroy
     redirect_to tasks_path
   end
@@ -43,5 +45,9 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :details)
+  end
+
+  def find_task
+    @task = Task.find(params[:id])
   end
 end
